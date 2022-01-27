@@ -21,6 +21,7 @@ namespace Assignment3.Data
         public DbSet<Assignment3.Models.OrderItem> OrderItems { get; set; }
         public DbSet<Assignment3.Models.Payment> Payments { get; set; }
         public DbSet<Assignment3.Models.Store> Stores { get; set; }
+        public DbSet<Assignment3.Models.Cart> Carts {get; set;}
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -30,6 +31,7 @@ namespace Assignment3.Data
             modelBuilder.Entity<DeliveryPerson>();
             modelBuilder.Entity<Payment>().HasNoKey();
             modelBuilder.Entity<Store>();
+            modelBuilder.Entity<Cart>();
         }
     }
 }

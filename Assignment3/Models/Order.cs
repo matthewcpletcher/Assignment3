@@ -13,6 +13,8 @@ namespace Assignment3.Models
         public int DPersonID { get; set; }
         [ForeignKey ("Store")]
         public int StoreId { get; set; }
+        [ForeignKey("Cart")]
+        public int CartId {get; set;}
         public int OrderStatus { get; set; }
         public DateTime CreatedDate { get; set; } = DateTime.Now;
 
