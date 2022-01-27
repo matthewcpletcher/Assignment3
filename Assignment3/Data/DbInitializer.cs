@@ -34,6 +34,15 @@ namespace Assignment3.Data
 
             context.DeliveryPeople.AddRange(DeliveryPerson);
             context.SaveChanges();
+
+            var OrderItems = new OrderItem[]
+            {
+                new OrderItem{ ProductName="Bread"},
+                new OrderItem{ ProductName="Milk"}
+            };
+
+            context.OrderItems.AddRange(OrderItems);
+            context.SaveChanges();
         }
     }
 }

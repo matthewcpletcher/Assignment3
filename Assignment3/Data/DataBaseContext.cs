@@ -18,7 +18,7 @@ namespace Assignment3.Data
         public DbSet<Assignment3.Models.Customer> Customers { get; set; }
         public DbSet<Assignment3.Models.DeliveryPerson> DeliveryPeople { get; set;}
         public DbSet<Assignment3.Models.Order> Orders { get; set; }
-        public DbSet<Assignment3.Models.OrderItems> OrderItems { get; set; }
+        public DbSet<Assignment3.Models.OrderItem> OrderItems { get; set; }
         public DbSet<Assignment3.Models.Payment> Payments { get; set; }
         public DbSet<Assignment3.Models.Store> Stores { get; set; }
 
@@ -26,9 +26,9 @@ namespace Assignment3.Data
         {
             modelBuilder.Entity<Customer>();
             modelBuilder.Entity<Order>();
-            modelBuilder.Entity<OrderItems>();
+            modelBuilder.Entity<OrderItem>();
             modelBuilder.Entity<DeliveryPerson>();
-            modelBuilder.Entity<Payment>();
+            modelBuilder.Entity<Payment>().HasNoKey();
             modelBuilder.Entity<Store>();
         }
     }
