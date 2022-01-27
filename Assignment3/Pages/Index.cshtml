@@ -13,12 +13,18 @@
           </div>
     </div>
 </div>
-       <tbody>
-        @foreach (var item in Model.OrderItem) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.ProductName)
-            </td>
-        </tr>
+    <table class="table">
+        <tbody>
+            @foreach (var item in Model.OrderItem) {
+                <tr>
+                    <td>
+                        <div class="form-group">
+                            @Html.DisplayFor(modelItem => item.ProductName)
+                            @Html.DisplayFor(modelItem => item.Quantity)
+                        </div>
+                    </td>
+                </tr>
 }
-    </tbody>
+        <</tbody>
+    </table>
+
