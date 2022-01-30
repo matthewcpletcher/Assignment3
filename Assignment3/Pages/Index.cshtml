@@ -6,7 +6,7 @@
 
 <div class="row mb-auto">
     <div class="col-md-4">
-          <div class="col p-4 mb-4 ">
+          <div class="col p-4 mb-4">
             <h2 class="card-text">
                     Delivery Cart
             </h2>
@@ -15,12 +15,16 @@
 </div>
     <table class="table">
         <tbody>
-            @foreach (var item in Model.OrderItem) {
+            @foreach (var item in Model.OrderItems) {
                 <tr>
                     <td>
                         <div class="form-group">
                             @Html.DisplayFor(modelItem => item.ProductName)
-                            @Html.DisplayFor(modelItem => item.Quantity)
+<!--The idea for the prototype was for a customer to be able to:
+1.select an item to buy
+2.selecting an item would create a new cart object
+3.once the order is complete the delivery driver could select the order to delivery by putting their ID number in
+we found this to be too difficult.-->
                         </div>
                     </td>
                 </tr>

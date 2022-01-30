@@ -20,11 +20,11 @@ namespace Assignment3.Pages.OrderItems
             _context = context;
         }
 
-        public IList<OrderItem> OrderItem { get;set; }
+        public IList<OrderItem> OrderItems { get;set; }
 
         public async Task OnGetAsync()
         {
-            OrderItem = await _context.OrderItems.ToListAsync();
+            OrderItems = await _context.OrderItems.ToListAsync();
         }
     }
 }
