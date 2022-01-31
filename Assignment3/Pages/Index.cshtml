@@ -20,8 +20,13 @@
                     <td>
                         <div class="form-group">
                             @Html.DisplayFor(modelItem => item.ProductName)
-                            @Html.DisplayFor(modelItem => item.Quantity)
+                            @Html.DisplayFor(modelItem => item.Price)
+                            
+
                         </div>
+                    </td>
+                    <td>
+                         <a asp-page="./Delete" asp-route-id="@item.OrderID">Add to Cart</a>
                     </td>
                 </tr>
 }

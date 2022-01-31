@@ -37,8 +37,15 @@ namespace Assignment3.Data
 
             var OrderItems = new OrderItem[]
             {
-                new OrderItem{ ProductName="Bread"},
-                new OrderItem{ ProductName="Milk"}
+                new OrderItem{ ProductName="Bread", Price=2.99M},
+                new OrderItem{ ProductName="Milk", Price=3.99M},
+                new OrderItem{ ProductName="Steaks", Price=24.99M},
+                new OrderItem{ ProductName="Chicken Thighs", Price=14.99M},
+                new OrderItem{ ProductName="Beef Patties", Price=17.99M},
+                new OrderItem{ ProductName="Eggs", Price=12.99M},
+                new OrderItem{ ProductName="Captain Crunch", Price=5.99M},
+                new OrderItem{ ProductName="Soda", Price=2.99M}
+
             };
 
             context.OrderItems.AddRange(OrderItems);
