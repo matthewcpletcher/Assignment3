@@ -21,10 +21,12 @@ namespace Assignment3.Pages.DeliveryP
         }
 
         public IList<DeliveryPerson> DeliveryPerson { get;set; }
+        public IList<OrderItem> OrderItems { get;set; }
 
         public async Task OnGetAsync()
         {
             DeliveryPerson = await _context.DeliveryPeople.ToListAsync();
+            OrderItems = await _context.OrderItems.ToListAsync();
         }
     }
 }
