@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using System.Linq;
 namespace Assignment3.Models
 {
     public class Customer
