@@ -21,7 +21,7 @@ public class UnitTest1
             Email = "john@yahoo.com" 
         };
 
-        //Test would check the customer name to profanity
+        //Test would check the customer name for profanity
 
         Assert.NotEqual("Profanity", Cust.Name);
 
