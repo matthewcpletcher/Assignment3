@@ -10,5 +10,8 @@ namespace Assignment3.Models
         public string? PhoneNum { get; set; }
         public string? Email { get; set; }
 
+        
+
     }
+    
 }

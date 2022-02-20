@@ -32,5 +32,11 @@ namespace Assignment3.Data
             modelBuilder.Entity<Payment>().HasNoKey();
             modelBuilder.Entity<Store>();
         }
+
+        public async virtual Task AddCustomerAsync(Customer Customers)
+        {
+            await AddAsync(Customers);
+            await SaveChangesAsync();
+        }
     }
 }

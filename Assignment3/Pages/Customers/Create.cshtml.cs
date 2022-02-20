@@ -36,8 +36,9 @@ namespace Assignment3.Pages.Customers
                 return Page();
             }
 
-            _context.Customers.Add(Customer);
-            await _context.SaveChangesAsync();
+            await _context.AddCustomerAsync(Customer);
+
+
 
             return RedirectToPage("./Index");
         }
